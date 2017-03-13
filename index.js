@@ -1,6 +1,32 @@
-function validateUserInput(){
-  let validationResult = false;
+function validateUserInput() {
 
+    "use strict";
+    var validationResult = false;
+
+    var username = document.getElementsByName("username")[0].value;
+    var email = document.getElementsByName("email")[0].value;
+    var phone = document.getElementsByName("phone")[0].value;
+    var password = document.getElementsByName("password")[0].value;
+    var passwordConfirmation = document.getElementsByName("passwordConfirmation")[0].value;
+
+    // alert(username);
+    // alert(checkPersonName(username));
+    // alert(email);
+    // alert(checkEmail(email));
+    // alert(phone);
+    // alert(checkPhoneNumber(phone));
+    // alert(password);
+    // alert(checkPassword(password));
+    // alert(passwordConfirmation);
+    // alert(checkPasswordSame(password , passwordConfirmation));
+    validationResult = (checkPersonName(username) &&
+        checkEmail(email) &&
+        checkPhoneNumber(phone) &&
+        checkPassword(password) &&
+        checkPasswordSame(password , passwordConfirmation)
+    );
+
+    // validationResult = true;
   /***
    * Validation Rules
    * Username:
